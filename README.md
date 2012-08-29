@@ -19,7 +19,7 @@ The License
 -----------
 Spoutcraft is licensed under the [GNU Lesser General Public License Version 3][License].
 
-Copyright (c) 2011-2012, SpoutDev <<http://spout.org/>>
+Copyright (c) 2011-2012, SpoutDev <<http://www.spout.org/>>
 
 Getting the Source
 ------------------
