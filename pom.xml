@@ -78,7 +78,6 @@
 	<!-- Build settings -->
 	<build>
 		<defaultGoal>clean package</defaultGoal>
-		<sourceDirectory>${project.basedir}/mcp/src/minecraft</sourceDirectory>
 
 		<!-- Resources -->
 		<resources>
@@ -404,7 +403,7 @@
 									<replaces>
 										<replace>
 											<from>long version = 0L</from>
-											<to>long version = ${buildNumber}L</to>
+											<to>long version = ${releaseVersion} b${buildNumber}L</to>
 										</replace>
 									</replaces>
 								</resource>
