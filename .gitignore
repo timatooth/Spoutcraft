@@ -76,5 +76,6 @@ mcp/reobf
 mcp/runtime
 mcp/src
 mcp/temp
+mcp/conf/version.cfg
 *.bat
 *.sh
