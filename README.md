@@ -59,5 +59,5 @@ Coding and Pull Request Formatting
 [Twitter Logo]: http://cdn.spout.org/img/button/twitter_follow_us.png
 [Facebook]: http://spout.in/facebook
 [Facebook Logo]: http://cdn.spout.org/img/button/facebook_like_us.png
-[Donate]: https://www.paypal.com/cgi-bin/webscr?hosted_button_id=QNJH72R72TZ64&item_name=Spoutcraft+donation+%28from+github.com%29&cmd=_s-xclick
+[Donate]: http://spout.in/donate
 [Donate Logo]: http://cdn.spout.org/img/button/donate_paypal_96x96.png
