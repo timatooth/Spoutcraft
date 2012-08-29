@@ -59,7 +59,7 @@ public class Packet18Animation extends Packet {
 			SpoutClient.getInstance().setSpoutVersion(1);
 			((NetClientHandler) par1NetHandler).addToSendQueue(this);
 			SpoutClient.getInstance().getPacketManager().sendSpoutPacket(new PacketRenderDistance((byte)Minecraft.theMinecraft.gameSettings.renderDistance));
-			SpoutClient.getInstance().getPacketManager().sendSpoutPacket(new PacketFullVersion(Long.toString(SpoutClient.getClientVersion())));
+			SpoutClient.getInstance().getPacketManager().sendSpoutPacket(new PacketFullVersion(SpoutClient.getClientVersion()));
 			List<Addon> addons = new ArrayList<Addon>(Arrays.asList(SpoutClient.getInstance().getAddonManager().getAddons()));
 			for (Iterator<Addon> i = addons.iterator(); i.hasNext(); ) {
 				Addon a = i.next();

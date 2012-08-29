@@ -101,7 +101,7 @@ import org.spoutcraft.spoutcraftapi.util.Location;
 public class SpoutClient extends PropertyObject implements Client {
 	private static SpoutClient instance = null;
 	private static final Thread dataMiningThread = new DataMiningThread();
-	private static final long version = 0L;
+	private static final String version = "Unknown Version";
 
 	private final SimpleSkyManager skyManager = new SimpleSkyManager();
 	private final ChatManager chatManager = new ChatManager();
@@ -191,7 +191,7 @@ public class SpoutClient extends PropertyObject implements Client {
 			Spoutcraft.setClient(instance);
 
 			//must be done after construtor
-			ServerAddon addon = new ServerAddon("Spoutcraft", Long.toString(version), null);
+			ServerAddon addon = new ServerAddon("Spoutcraft", version, null);
 			instance.addonManager.addFakeAddon(addon);
 
 			System.out.println("Available Memory: " + Runtime.getRuntime().maxMemory() + " mb");
@@ -199,7 +199,7 @@ public class SpoutClient extends PropertyObject implements Client {
 		return instance;
 	}
 
-	public static long getClientVersion() {
+	public static String getClientVersion() {
 		return version;
 	}
 
@@ -494,7 +494,7 @@ public class SpoutClient extends PropertyObject implements Client {
 		return new File(Minecraft.getMinecraftDir(), "addons" + File.separator + "updates");
 	}
 
-	public long getVersion() {
+	public String getVersion() {
 		return version;
 	}
 

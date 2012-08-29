@@ -394,16 +394,19 @@
 											if (!(new File(project.basedir, "mcp/src/minecraft/org/spoutcraft/client").isDirectory())) { return false; }
 											if (!(new File(project.basedir, "mcp/src/minecraft/org/spoutcraft/client/SpoutClient.java").isFile())) { return false; }
 											List lines = new File(project.basedir, "mcp/src/minecraft/org/spoutcraft/client/SpoutClient.java").readLines();
-											for (line in lines) { if (line.contains("long version = 0L")) { return true; } }
+											for (line in lines) { if (line.contains("Unknown Version")) { return true; } }
+											return false;
 										}}
 									</runIf>
 									<directory>${project.basedir}/mcp/src/minecraft/org/spoutcraft/client</directory>
 									<targetPath>${project.basedir}/mcp/src/minecraft/org/spoutcraft/client</targetPath>
-									<include>SpoutClient.java</include>
+									<includes>
+										<include>SpoutClient.java</include>
+									</includes>
 									<replaces>
 										<replace>
-											<from>long version = 0L</from>
-											<to>long version = ${releaseVersion} b${buildNumber}L</to>
+											<from>Unknown Version</from>
+											<to>${releaseVersion} b${buildNumber}</to>
 										</replace>
 									</replaces>
 								</resource>
@@ -640,7 +643,7 @@
 										<argument>%*</argument>
 									</arguments>
 								</configuration>
-								<phase>compile</phase>
+								<phase>process-classes</phase>
 								<goals>
 									<goal>exec</goal>
 								</goals>
