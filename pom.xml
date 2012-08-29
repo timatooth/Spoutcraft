@@ -120,7 +120,7 @@
 								<copyright>Copyright (c) ${project.inceptionYear}-2012, ${project.organization.name}</copyright>
 							</properties>
 							<includes>
-								<include>src/main/java/minecraft/org/spoutcraft/**</include>
+								<include>src/main/java/org/spoutcraft/**</include>
 								<include>src/test/java/**</include>
 							</includes>
 						</configuration>
@@ -360,7 +360,7 @@
 							<goal>copy</goal>
 						</goals>
 					</execution>
-					<!-- Copy Spoutcraft source to MCP directory -->
+					<!-- Copy source to MCP directory -->
 					<execution>
 						<id>copy-source</id>
 						<configuration>
@@ -373,7 +373,7 @@
 										}}
 									</runIf>
 									<directory>${project.basedir}/src/main/java</directory>
-									<targetPath>${project.basedir}/mcp/src</targetPath>
+									<targetPath>${project.basedir}/mcp/src/minecraft</targetPath>
 									<include>**/*</include>
 									<preservePath>true</preservePath>
 								</resource>
@@ -384,7 +384,7 @@
 							<goal>copy</goal>
 						</goals>
 					</execution>
-					<!-- Add build number to Spoutcraft source -->
+					<!-- Add version and build to source -->
 					<execution>
 						<configuration>
 							<resources>
