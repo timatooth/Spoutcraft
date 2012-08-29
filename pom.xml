@@ -16,7 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<minecraftVersion>1.3.2</minecraftVersion>
 		<lwjglVersion>2.8.3</lwjglVersion>
-		<mcpVersion>7.2</mcpVersion>
+		<mcpVersion>72</mcpVersion>
 		<apiVersion>dev-SNAPSHOT</apiVersion>
 		<buildNumber>0</buildNumber>
 	</properties>
@@ -157,7 +157,7 @@
 										}}
 									</runIf>
 									<targetPath>${basedir}/mcp</targetPath>
-									<file>http://get.spout.org/content/tool/mcp/mcp-${mcpVersion}.zip</file><!-- http://mcp.ocean-labs.de/files/mcp72.zip -->
+									<file>http://mcp.ocean-labs.de/files/mcp${mcpVersion}.zip</file>
 									<unpack>true</unpack>
 									<useTrueZipForUnpack>false</useTrueZipForUnpack>
 									<preservePath>true</preservePath>
